@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/scss/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="head">
+        <div class="head-title">Andrey Chivirev</div>
+    </header>
+    <main class="main">
+        <div class="note main__note">
+            Регистрация в моем влоге нужна, 
+            чтобы вы получали новые посты от меня лично, 
+            а так же, чтобы ставить лайки
+        </div>
+        <div class="registr">
+            <form action="">
+                <div class="reistr__form-block form-block">
+                    <div class="form-block__label">Выберите фото</div>
+                    <div class="choose-image">
+                        <p class="choose-image__p">+</p>
+                        <input type="file" accept="image/*" class="registr__inp choose-image__inp" name="avatarka">
+                    </div>
+                </div>
+                <div class="registr__grop">
+                    <div class="reistr__form-block form-block">
+                        <div class="form-block__label">Имя</div>
+                        <input type="text" class="input registr__inp" name="name">
+                    </div>
+                    <div class="reistr__form-block form-block">
+                        <div class="form-block__label">Фамилия</div>
+                        <input type="text" class="input registr__inp" name="fname">
+                    </div>
+                </div>
+                
+                <div class="reistr__form-block form-block">
+                    <div class="form-block__label">E-mail</div>
+                    <input type="email" class="input registr__inp" name="email">
+                </div>
+                <div class="reistr__form-block form-block">
+                    <div class="form-block__label">Пароль</div>
+                    <input type="password" class="input registr__inp" name="pass">
+                </div>
+                <div class="reistr__form-block form-block">
+                    <div class="form-block__label">Повторите пароль</div>
+                    <input type="password" class="input registr__inp" name="passR">
+                </div>
+                <input type="submit" name="sub" class="button registr__but" value="Sign Up">
+            </form>
+            <div class="note registr__note">
+                требования к паролю
+                <ul>
+                    <li class="note__rules-pass note__rules-pass_A">наличие букв верхнего регистра</li>
+                    <li class="note__rules-pass note__rules-pass_a">наличие букв нижнего регистра</li>
+                    <li class="note__rules-pass note__rules-pass_d">наличие букв цифр</li>
+                    <li class="note__rules-pass note__rules-pass_s">наличие спец. символов</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="../src/blocks/choose-image/choose-image.js"></script>
+    <script src="../src/blocks/registr/registr.js"></script>
+    <script src="../src/index.js"></script>
+</body>
+</html>

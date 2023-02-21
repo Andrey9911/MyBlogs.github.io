@@ -1,0 +1,83 @@
+@import '../../scss/variable/variable';
+.registr{
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: $padding-big - 30 $padding-big + 170;
+    
+
+    .registr__grop{@extend %flex-content;
+         justify-content: space-between};
+    .registr__grop>.reistr__form-block{ width: 120px;}
+
+    .reistr__form-block{
+        margin: 20px 0;
+    }
+    .registr__inp{
+        width: 100%;
+    }
+}
+.form-block{
+    max-width: 100%;
+
+}
+.inp_valid+.form-block__label::before{
+    content: '\F623';
+    display: inline-block;
+    color: var(--color-valid);
+}
+
+.registr__note{
+    bottom: 100px;
+    right: 100px;
+
+    ul{margin-top: 10px;}
+    .note__rules-pass{margin: 5px 10px;}
+}
+
+ul{
+    .rules-pass-check{
+        color: var(--color-green);
+    }
+    .rules-pass-invalid{
+        color: var(--color-valid);
+    }
+
+    .rules-pass-check::before{
+        content: '\F26B';
+        display: inline-block;
+        font-family: 'btfont'!important;
+        width: 15px;
+        height: 15px;
+        color: var(--color-green);
+    }
+    .rules-pass-invalid::before{
+        content: '\F26B';
+        font-family: 'btfont'!important;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        color: var(--color-valid);
+    }
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .registr{
+        max-width: 100%;
+        
+    }
+    .registr__grop>.reistr__form-block{ width: 250px;}
+    .form-block__label{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+    // .registr__grop>.reistr__form-block{ width: 120px;}
+}
+@media  screen and (max-width: 500px) {
+    .registr{
+        padding: 10px;
+    }
+}

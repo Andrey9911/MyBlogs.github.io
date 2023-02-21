@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'btfont';
+    src: url('../../node_modules/@uiw/bootstrap-icons/fonts/btfont.ttf');
+}
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -10,9 +14,13 @@
     --color-outside-dark-block:#181818;
     --color-normal-text:#000;
     --color-hover-text: #c62326;
+    --color-hover-border-block: #2326c6b8;
+    --color-green:#26c623;
+    --color-valid: #c62326;
 
 } 
 a{text-decoration: none;color: var(--color-inside-dark-block);}
+ul{list-style-type: none;}
 %flex-content{
     display: flex;
     align-items: center;
@@ -21,7 +29,14 @@ a{text-decoration: none;color: var(--color-inside-dark-block);}
 $padding-big:50px;
 $padding-small: 5px;
 
+
+@import '../blocks/choose-image/choose-image';
+@import '../blocks/error/error';
+@import '../blocks/registr/registr';
+@import '../blocks/note/note';
+@import '../blocks/button/button';
 @import '../blocks/header/header';
+@import '../blocks/input/input.scss';
 
 
 
