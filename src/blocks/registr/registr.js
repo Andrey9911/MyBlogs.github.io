@@ -1,8 +1,14 @@
 let form = document.querySelector('.registr>form');
+let id = 0;
 
 // console.log(form.name);
 
 form.sub.addEventListener('click', event =>{sendData(event)});
+form.avatarka.addEventListener('change', (event)=>{
+    var nameFile = inputFile(event,event.target.parentElement,nameFile);
+    
+    console.log(nameFile);
+})
 
 
 function sendData(e)
@@ -11,7 +17,14 @@ function sendData(e)
 
     if(checkValid())
     {
-        checkPassword()
+        let answer = checkPassword()
+        console.log(answer);
+        if(answer.istrue)
+        {
+            console.log(true);
+            validData(answer.name,answer.fname,answer.password,answer.email);
+        }
+        
     }
     
 }
@@ -25,13 +38,11 @@ function checkValid()
         if(item.value == '')
         {
             error_point ++;
-            item.classList.add('inp_valid')
+            item.classList.add('inp_invalid')
             item.placeholder = 'invalid value!';
         }
         else{
-            if(item.name == 'avatarka') inputFile(item)
-            
-            item.classList.remove('inp_valid')
+            item.classList.remove('inp_invalid')
             item.placeholder = '';
         }
     }
@@ -45,6 +56,7 @@ function checkPassword(){
         if(pass.value.length <= 6) errMessage(document.body,'пароли не должны быть меньше 6 символов')
         else
         {
+            let valid_point = 0;
             let parent = document.querySelector('.note ul');
             let reg_A = parent.querySelector('.note__rules-pass_A');
             let reg_a = parent.querySelector('.note__rules-pass_a');
@@ -68,17 +80,42 @@ function checkPassword(){
 
             if(/[$%^&*]/.test(pass.value)) reg_s.classList.add('rules-pass-check')
             else reg_s.classList.add('rules-pass-invalid')
+
+            for(item of parent.children)
+            {
+                if(item.classList.contains('rules-pass-check')) valid_point++;
+            }
+            
+            if(valid_point == parent.children.length)
+            {
+                return {
+                    istrue: true,
+                    password: pass.value,
+                    name: form.name.value,
+                    email: form.email.value,
+                    fname: form.fname.value
+                };
+            }
+            else return false;
         }
     }
 }
-
-
-
-function errMessage(parent,message)
+function validData(name,fname,nameFile,email,pass)
 {
-    let error_message = document.createElement('div');
-        error_message.className = 'error-message';
-        error_message.innerHTML = message;
-        parent.append(error_message);
-        setTimeout(() =>{error_message.remove()},1000);
+    id++;
+    let user = new User(id,name,fname,nameFile,pass,email);
+    console.log(user);
+    
 }
+
+function User(id,name,fname,img,password,email)
+{
+    this.id = id
+    this.name = name
+    this.fname = fname
+    this.img = img
+    this.password = password
+    this.email = email
+}
+
+

@@ -1,0 +1,27 @@
+.button {
+  background-color: var(--color-green);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 7px;
+  border: none;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 0.5s all ease;
+  cursor: pointer;
+  display: block;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 500px) {
+  .registr__but {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=button.css.map */

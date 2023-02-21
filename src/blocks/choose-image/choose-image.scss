@@ -6,6 +6,8 @@
     font-weight: bold;
     background-color: var(--bgc-def);
     box-sizing: border-box;
+    background-size:cover;
+    background-repeat:no-repeat;
     
 
     .choose-image__p{
@@ -31,7 +33,6 @@
     .choose-image__p{
         top: 5px;
         left: 25px;
-        
     }
 }
 

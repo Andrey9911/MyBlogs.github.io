@@ -44,10 +44,19 @@
                 <div class="reistr__form-block form-block">
                     <div class="form-block__label">Пароль</div>
                     <input type="password" class="input registr__inp" name="pass">
+                    <div class="pass-eye">
+                        <div class="pass-eye__eye"></div>
+                        <div class="pass-eye__no-eye"></div>
+                    </div>
+                    
                 </div>
                 <div class="reistr__form-block form-block">
                     <div class="form-block__label">Повторите пароль</div>
                     <input type="password" class="input registr__inp" name="passR">
+                    <div class="pass-eye">
+                        <div class="pass-eye__eye">&#xF341;</div>
+                        <i class="bi bi-eye-slash pass-eye__eye"></i>
+                    </div>
                 </div>
                 <input type="submit" name="sub" class="button registr__but" value="Sign Up">
             </form>
@@ -62,6 +71,7 @@
             </div>
         </div>
     </main>
+    <script src="../src/blocks/error/errorMessag.js"></script>
     <script src="../src/blocks/choose-image/choose-image.js"></script>
     <script src="../src/blocks/registr/registr.js"></script>
     <script src="../src/index.js"></script>

@@ -8,3 +8,5 @@ if(img_profile.querySelector('.profile-img').classList.contains('profile-img_isL
     img_profile.addEventListener('mouseleave', () => {
         drop_block.classList.remove('profile-drop_isActive')})
 }
+
+

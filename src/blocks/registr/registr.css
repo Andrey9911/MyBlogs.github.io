@@ -1,0 +1,92 @@
+.registr .registr__grop {
+  display: flex;
+  align-items: center;
+}
+
+.registr {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 20px 220px;
+}
+.registr .registr__grop {
+  justify-content: space-between;
+}
+.registr .registr__grop > .reistr__form-block {
+  width: 120px;
+}
+.registr .reistr__form-block {
+  margin: 20px 0;
+}
+.registr .registr__inp {
+  width: 100%;
+}
+
+.form-block {
+  max-width: 100%;
+}
+
+.inp_valid + .form-block__label::before {
+  content: "\f623";
+  display: inline-block;
+  color: var(--color-valid);
+}
+
+.registr__note {
+  bottom: 100px;
+  right: 100px;
+}
+.registr__note ul {
+  margin-top: 10px;
+}
+.registr__note .note__rules-pass {
+  margin: 5px 10px;
+}
+
+ul .rules-pass-check {
+  color: var(--color-green);
+}
+ul .rules-pass-invalid {
+  color: var(--color-valid);
+}
+ul .rules-pass-check::before {
+  content: "\f26b";
+  display: inline-block;
+  font-family: "btfont" !important;
+  width: 15px;
+  height: 15px;
+  color: var(--color-green);
+}
+ul .rules-pass-invalid::before {
+  content: "\f26b";
+  font-family: "btfont" !important;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  color: var(--color-valid);
+}
+
+.pass-eye .pass-eye__eye {
+  width: 1em;
+  font-size: 1.2em;
+  font-family: "btfont";
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1024px) {
+  .registr {
+    max-width: 100%;
+  }
+  .registr__grop > .reistr__form-block {
+    width: 250px;
+  }
+  .form-block__label {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 500px) {
+  .registr {
+    padding: 10px;
+  }
+}/*# sourceMappingURL=registr.css.map */
