@@ -1,0 +1,30 @@
+.top-block {
+  height: 100vh;
+  background-color: var(--bgc-def);
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 300px 0;
+}
+.top-block .top-block__title {
+  margin: auto;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 600;
+  color: var(--color-inside-dark-block);
+  transition: 0.5s ease all;
+  max-width: 700px;
+  min-width: 300px;
+  opacity: 0;
+}
+
+.top-block__title.top-block__title_show {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 900px) {
+  .top-block .top-block__title {
+    font-size: 2em;
+    max-width: 450px;
+  }
+}/*# sourceMappingURL=top-block.css.map */

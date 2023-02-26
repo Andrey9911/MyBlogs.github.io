@@ -1,3 +1,4 @@
+@import '../../scss/variable/variable.scss';
 .input.inp_invalid{
     border: 1px solid var(--color-valid);
     animation: error .4s ease; 

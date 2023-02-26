@@ -22,15 +22,10 @@
 } 
 a{text-decoration: none;color: var(--color-inside-dark-block);}
 ul{list-style-type: none;}
-%flex-content{
-    display: flex;
-    align-items: center;
-}
-
-$padding-big:50px;
-$padding-small: 5px;
 
 
+// @import './variable/variable.scss';
+@import '../blocks/top-block/top-block';
 @import '../blocks/choose-image/choose-image';
 @import '../blocks/error/error';
 @import '../blocks/registr/registr';
