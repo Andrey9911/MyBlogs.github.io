@@ -1,3 +1,4 @@
+@import '../../scss/variable/variable';
 .top-block{
     height: 100vh;
     background-color: var(--bgc-def);
@@ -15,12 +16,13 @@
         max-width: 700px;
         min-width: 300px;
         opacity: 0;
+
+        &.scrollShow{
+            @include scroll-show;
+        }
     }
 }
-.top-block__title.top-block__title_show{
-    opacity: 1;
-    transform: translateY(-10px);
-}
+
 @media screen and (max-width: 900px) {
     .top-block{
     .top-block__title{

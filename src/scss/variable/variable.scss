@@ -1,7 +1,12 @@
-%flex-content{
+@mixin flex-content{
     display: flex;
     align-items: center;
 }
 
 $padding-big:50px;
 $padding-small: 5px;
+
+@mixin scroll-show{
+    opacity: 1;
+    transform: translateY(-10px);
+}

@@ -1,8 +1,3 @@
-.registr .registr__grop {
-  display: flex;
-  align-items: center;
-}
-
 .registr {
   box-sizing: border-box;
   margin: 0 auto;
@@ -10,6 +5,8 @@
   padding: 20px 220px;
 }
 .registr .registr__grop {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .registr .registr__grop > .reistr__form-block {

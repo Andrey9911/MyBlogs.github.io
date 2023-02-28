@@ -16,8 +16,7 @@
   min-width: 300px;
   opacity: 0;
 }
-
-.top-block__title.top-block__title_show {
+.top-block .top-block__title.scrollShow {
   opacity: 1;
   transform: translateY(-10px);
 }

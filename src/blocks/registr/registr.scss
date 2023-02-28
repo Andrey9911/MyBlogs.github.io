@@ -6,7 +6,7 @@
     padding: $padding-big - 30 $padding-big + 170;
     
 
-    .registr__grop{@extend %flex-content;
+    .registr__grop{@include flex-content;
          justify-content: space-between};
     .registr__grop>.reistr__form-block{ width: 120px;}
 

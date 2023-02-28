@@ -5,17 +5,17 @@
     left: 0;
     right: 0;
     padding: $padding-big - 30 $padding-big + 50;
-    @extend %flex-content;
+    @include flex-content;
     // background-color: var(--bgc-def);
     color: var(--color-inside-dark-block);
-    filter: blur(2);
     justify-content: space-between;
     height: fit-content;
+    transition: .2s ease all;
 
     .head-title{
         font-weight: bold;
         font-size: 2em;
-        @extend %flex-content;
+        @include flex-content;
         justify-content: space-between;
         width: 300px;
 
@@ -41,7 +41,7 @@
 
         .head-nav-ul{
             list-style-type: none;
-            @extend %flex-content;
+            @include flex-content;
 
             .nav__li{
                 border-top: 3px solid var(--color-inside-dark-block);
@@ -79,7 +79,7 @@
     }
     .head__profile{
 
-        @extend %flex-content;
+        @include flex-content;
 
         .head__Sign{margin: 0 10px;cursor: pointer;};
         .head__Log{margin:0 10px;cursor: pointer;};
@@ -132,6 +132,23 @@
     }
 }
 
+.head_pos-fix{
+    animation: showFixHead .5s ease;
+    position: fixed;
+    background-color: #2326c6;
+    filter: blur(3);
+}
+
+@keyframes showFixHead {
+    5%{
+        top: -60px;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 1080px) {
     .head{
         padding: $padding-big - 30 $padding-big;
@@ -156,7 +173,6 @@
         }
     }
     .nav_version_mobile{
-        width: 100%;
         height: 0;
         opacity: 0;
         background-color: var(--bgc-block);
@@ -168,6 +184,8 @@
         box-shadow: 0 0 1px .5px #0000005f;
         position: absolute;
         top: 0;
+        left: 0;
+        right: 0;
         
         & a{color: #000;}
     }
