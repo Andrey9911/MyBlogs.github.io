@@ -11,6 +11,7 @@
     justify-content: space-between;
     height: fit-content;
     transition: .2s ease all;
+    z-index: 5;
 
     .head-title{
         font-weight: bold;
@@ -24,9 +25,9 @@
     &.head_static{
         background-color: var(--bgc-def);
         position: static;
+
     }
     &.haed_fixed{background-color: var(--bgc-def);;position: fixed;}
-    
 
     .profile-img>img{
         cursor: pointer;
@@ -93,7 +94,7 @@
             display: none;
             position: absolute;
             margin-top:0;
-            right: 10px;
+            right: 60px;
             min-width: 100px;
             border-radius: 3px;
             padding: 15px;
@@ -182,11 +183,15 @@
         // color: #000;
         border-radius: 0 0 4px 4px;
         box-shadow: 0 0 1px .5px #0000005f;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        z-index: 10;
         
+        .nav__li{
+            padding: 10px 0;
+        }
         & a{color: #000;}
     }
     .profile_version_mobile{
@@ -204,7 +209,7 @@
     }
     .nav_version_mobile.list-open-nav_isActive{
         opacity: 1;
-        height: 20vh;
+        height: fit-content;
     }
     .list-open-nav{z-index: 1;}
 }

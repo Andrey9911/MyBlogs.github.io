@@ -15,7 +15,6 @@
         transition: .5s ease all;
         max-width: 700px;
         min-width: 300px;
-        opacity: 0;
 
         &.scrollShow{
             @include scroll-show;

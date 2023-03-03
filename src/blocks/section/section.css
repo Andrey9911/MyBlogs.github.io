@@ -1,0 +1,55 @@
+.section {
+  height: 100vh;
+  padding: 20px 100px;
+  transition: 0.7s all ease;
+  transform: translateY(-50px);
+}
+
+.section__title {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 2em;
+}
+
+.section__content {
+  margin: 50px 0;
+}
+
+.section.visiable {
+  opacity: 0;
+}
+
+.section.visiable.scrollShow {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+@media screen and (max-width: 1080px) {
+  .section {
+    padding: 20px 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .section {
+    padding: 20px 50px;
+  }
+  .section .section__title {
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 765px) {
+  .section {
+    padding: 10px;
+  }
+  .section .section__title {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section {
+    padding: 10px;
+  }
+  .section .section__title {
+    font-size: 1.5em;
+  }
+}/*# sourceMappingURL=section.css.map */

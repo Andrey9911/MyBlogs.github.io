@@ -1,0 +1,22 @@
+.body__arrow-top{
+    transform: translateY(-10px);
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    z-index: 5;
+}
+.arrow-top{
+    opacity: 0;
+    border-radius: 50%;
+    background-color: var(--bgc-def);
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: .3s all ease;
+    cursor: pointer;
+}
+.arrow-top.arrow-top_active{
+    opacity: 1;
+    transform: translateY(10px);
+}

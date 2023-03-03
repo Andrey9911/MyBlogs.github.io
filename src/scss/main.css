@@ -1,16 +1,164 @@
-.my-bio {
+.section {
   height: 100vh;
   padding: 20px 100px;
+  transition: 0.7s all ease;
+  transform: translateY(-50px);
 }
-.my-bio .my-bio__title {
+
+.section__title {
   padding: 50px 0;
   text-align: center;
   font-size: 2em;
 }
+
+.section__content {
+  margin: 50px 0;
+}
+
+.section.visiable {
+  opacity: 0;
+}
+
+.section.visiable.scrollShow {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+@media screen and (max-width: 1080px) {
+  .section {
+    padding: 20px 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .section {
+    padding: 20px 50px;
+  }
+  .section .section__title {
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 765px) {
+  .section {
+    padding: 10px;
+  }
+  .section .section__title {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section {
+    padding: 10px;
+  }
+  .section .section__title {
+    font-size: 1.5em;
+  }
+}
+.my-scills__content {
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+}
+
+.my-scills__scill {
+  margin: 20px 0;
+}
+
+.my-scills__hard-scills {
+  max-width: 500px;
+  min-width: 500px;
+}
+
+.my-scills__soft-scills {
+  width: 500px;
+  margin: 0 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.my-scills__soft-scills .my-skill__soft-skill {
+  margin: 10px;
+}
+
+.soft-skill {
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 2px solid #c62326;
+  transition: all ease 0.3s;
+  color: #c62326;
+  border-radius: 20px;
+}
+.soft-skill:hover {
+  cursor: pointer;
+  background-color: rgba(198, 35, 38, 0.5098039216);
+  color: rgb(255, 255, 255);
+}
+
+.progress-block {
+  max-width: 500px;
+  position: relative;
+}
+.progress-block .progress-block__val {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  font-weight: 400;
+}
+
+.progress-block__progress-scale[data-lg=html],
+.progress-block__progress-scale[data-lg=js],
+.progress-block__progress-scale[data-lg=scss],
+.progress-block__progress-scale[data-lg=vue] {
+  width: 0;
+  transition: all ease-out 1.5s;
+}
+
+.progress-block__progress-scale[data-lg=html].show {
+  width: 70%;
+}
+
+.progress-block__progress-scale[data-lg=js].show {
+  width: 75%;
+}
+
+.progress-block__progress-scale[data-lg=scss].show {
+  width: 50%;
+}
+
+.progress-block__progress-scale[data-lg=vue].show {
+  width: 30%;
+}
+
+.progress-block__progress-scale {
+  margin: 10px 0;
+  height: 7px;
+  background-color: #c62326;
+  border: none;
+}
+
+@media screen and (max-width: 900px) {
+  .my-scills__content {
+    padding: 10px;
+    display: block;
+  }
+  .my-scills__hard-scills {
+    margin: auto;
+    max-width: 300px;
+    min-width: 100px;
+  }
+  .my-scills__soft-scills {
+    width: 300px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .my-scills__soft-scills .my-skill__soft-skill {
+    margin: 5px;
+  }
+}
 .my-bio .my-bio__content {
   display: flex;
   align-items: center;
-  margin: 50px 0;
   justify-content: space-between;
 }
 .my-bio .my-bio__content .my-bio__text {
@@ -41,18 +189,7 @@
   z-index: 0;
 }
 
-@media screen and (max-width: 1080px) {
-  .my-bio {
-    padding: 20px 50px;
-  }
-}
 @media screen and (max-width: 900px) {
-  .my-bio {
-    padding: 20px 50px;
-  }
-  .my-bio .my-bio__title {
-    padding: 20px 0;
-  }
   .my-bio .my-bio__content {
     display: flex;
     align-items: center;
@@ -67,12 +204,6 @@
   }
 }
 @media screen and (max-width: 765px) {
-  .my-bio {
-    padding: 10px;
-  }
-  .my-bio .my-bio__title {
-    font-size: 1.5em;
-  }
   .my-bio .my-bio__content {
     justify-content: center;
   }
@@ -86,12 +217,6 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .my-bio {
-    padding: 10px;
-  }
-  .my-bio .my-bio__title {
-    font-size: 1.5em;
-  }
   .my-bio .my-bio__content {
     display: block;
   }
@@ -132,7 +257,6 @@
   transition: 0.5s ease all;
   max-width: 700px;
   min-width: 300px;
-  opacity: 0;
 }
 .top-block .top-block__title.scrollShow {
   opacity: 1;
@@ -394,6 +518,7 @@ ul .rules-pass-invalid::before {
   height: -moz-fit-content;
   height: fit-content;
   transition: 0.2s ease all;
+  z-index: 5;
 }
 .head .head-title {
   font-weight: bold;
@@ -476,7 +601,7 @@ ul .rules-pass-invalid::before {
   display: none;
   position: absolute;
   margin-top: 0;
-  right: 10px;
+  right: 60px;
   min-width: 100px;
   border-radius: 3px;
   padding: 15px;
@@ -576,10 +701,14 @@ ul .rules-pass-invalid::before {
     font-size: 1.5em;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 0 1px 0.5px rgba(0, 0, 0, 0.3725490196);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
+  }
+  .nav_version_mobile .nav__li {
+    padding: 10px 0;
   }
   .nav_version_mobile a {
     color: #000;
@@ -596,7 +725,8 @@ ul .rules-pass-invalid::before {
   }
   .nav_version_mobile.list-open-nav_isActive {
     opacity: 1;
-    height: 20vh;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .list-open-nav {
     z-index: 1;
@@ -649,6 +779,31 @@ ul .rules-pass-invalid::before {
     transform: translateX(0px);
   }
 }
+.body__arrow-top {
+  transform: translateY(-10px);
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  z-index: 5;
+}
+
+.arrow-top {
+  opacity: 0;
+  border-radius: 50%;
+  background-color: var(--bgc-def);
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+
+.arrow-top.arrow-top_active {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
 @font-face {
   font-family: "btfont";
   src: url("../../node_modules/@uiw/bootstrap-icons/fonts/btfont.ttf");

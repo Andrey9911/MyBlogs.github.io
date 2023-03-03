@@ -1,0 +1,46 @@
+@import '../../scss/variable/variable';
+.section{
+    height: 100vh;
+    padding: $padding-big - 30 $padding-big + 50;
+    transition: .7s all ease;
+    transform: translateY(-50px);
+}
+.section__title{
+    padding: $padding-big 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+.section__content{
+    margin: $padding-big 0;
+}
+.section.visiable{opacity: 0;}
+.section.visiable.scrollShow{opacity: 1;transform: translateY(0px);}
+
+@media screen and (max-width: 1080px) {
+    .section{
+        padding: $padding-big - 30 $padding-big;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section{
+        padding: $padding-big - 30 $padding-big;
+        .section__title{
+            padding: $padding-big - 30 0;
+        }
+    }
+}
+@media screen and (max-width: 765px){
+    .section{
+        padding: $padding-big - 40;
+        .section__title{font-size: 1.5em;}
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .section{
+        padding: $padding-big - 40;
+        .section__title{font-size: 1.5em;}
+    }
+}

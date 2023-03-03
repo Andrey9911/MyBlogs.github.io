@@ -1,0 +1,97 @@
+@import '../../scss/variable/variable';
+.my-scills{
+}
+.my-scills__content{
+    padding: $padding-big - 20 $padding-big;
+    @include flex-content;
+}
+.my-scills__scill{
+    margin: 20px 0;
+}
+.my-scills__hard-scills{
+    max-width: 500px;
+    min-width: 500px;
+}
+
+.my-scills__soft-scills{
+    width: 500px;
+    margin: 0 50px;
+    @include flex-content;
+    flex-wrap: wrap;
+
+    .my-skill__soft-skill{
+        margin: 10px;
+    }
+}
+.soft-skill{
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 2px solid #c62326;
+    transition: all ease .3s;
+    color: #c62326;
+    border-radius: 20px;
+
+    &:hover{cursor: pointer; background-color: #c6232682;color:rgb(255, 255, 255);}
+}
+.progress-block{
+    max-width: 500px;
+    position: relative;
+
+    .progress-block__val{
+        position: absolute;
+        top: 0;
+        right: 0px;
+        font-weight: 400;
+    }
+}
+
+.progress-block__progress-scale[data-lg='html'],
+.progress-block__progress-scale[data-lg='js'],
+.progress-block__progress-scale[data-lg='scss'],
+.progress-block__progress-scale[data-lg='vue']{width: 0;transition: all ease-out 1.5s;}
+
+.progress-block__progress-scale[data-lg='html'].show{width: calc(100% - 30%);}
+.progress-block__progress-scale[data-lg='js'].show{width: calc(100% - 25%);}
+.progress-block__progress-scale[data-lg='scss'].show{width: calc(100% - 50%);}
+.progress-block__progress-scale[data-lg='vue'].show{width: calc(100% - 70%);}
+
+.progress-block__progress-scale{
+    margin: 10px 0;
+    height: 7px;
+    background-color: #c62326;
+    border: none;
+}
+
+@media screen and (max-width: 1080px) {
+    
+}
+
+@media screen and (max-width: 900px) {
+    .my-scills__content{
+        padding: $padding-big - 40;
+        display: block;
+    }
+    .my-scills__hard-scills{
+        margin: auto;
+        max-width: 300px;
+        min-width: 100px;
+    }
+    
+    .my-scills__soft-scills{
+        width: 300px;
+        margin: 50px auto;
+        @include flex-content;
+        flex-wrap: wrap;
+    
+        .my-skill__soft-skill{
+            margin: 5px;
+        }
+    }
+}
+@media screen and (max-width: 765px){
+    
+}
+@media screen and (max-width: 500px)
+{
+    
+}

@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="arrow-top body__arrow-top">Up</div>
         <header class="head">
             <div class="head-title">
                 Andrey Chivirev
@@ -17,12 +18,13 @@
             <div class="head-nav">
                 <ul class="head-nav-ul">
                     <li class="nav__li"><a href="#about">about</a></li>
+                    <li class="nav__li"><a href="#my-skills">my skills</a></li>
                     <li class="nav__li"><a href="#myBlog">my blog</a></li>
                     <li class="nav__li"><a href="#contacts">contacts</a></li>
                 </ul>
             </div>
             <div class="head__profile profile">
-                <p class="head__Sign link"><a href="root/register.html">Sign Up</a></p>
+                <p class="head__Sign link"><a href="#">Sign Up</a></p>
                 <p class="head__Log link">Log Up</p>
                 <div class="profile-drop">
                     <div class="profile-img size-sm profile-img_isLogup">
@@ -56,26 +58,69 @@
         </header>
         <main class="main">
             <section class="top-block">
-                <div class="top-block__title scrollShow">
+                <div class="top-block__title">
                     <h2 class="title__h2 h2">Andrey Chivirev</h2>
                     <p class="title__p p">web developer</p>
                 </div>
                 <div class="top-block__image"></div>
             </section>
-            <section class="my-bio">
-                <h3 class="my-bio__title">Hello, I`m Andrey Chivirev</h3>
-                <div class="my-bio__content">
+            <section class="my-bio section visiable" id="#about">
+                <h3 class="my-bio__title section__title">Hello, I`m Andrey Chivirev</h3>
+                <div class="my-bio__content section__content">
                     <div class="my-bio__img"></div>
-                    <p class="my-bio__text">beginner web developer, developing in Front-end.
-                        I am 19 years old,
-                        I live in Moscow, I am finishing my college studies this summer
+                    <p class="my-bio__text">
+                        Здравствуйте, я из Москвы.
+                        Заканчиваю 4 курс специальности «информационные системы и программирование». 
+                        
+                        Сервис погоды с представлением данных благодаря API OpenWeatherMap
+
                     </p>
                 </div>
-                
+            </section>
+            <section class="my-scills section visiable" id="#my-skills">
+                <h3 class="section__title">My scills</h3>
+                <div class="section__content my-scills__content">
+                    <div class="my-scills__hard-scills">
+                        <div class="my-scills__scill progress-block" >
+                            <div class="progress-block__label">HTML</div>
+                            <div class="progress-block__val">70%</div>
+                            <div data-lg="html" class="progress-block__progress-scale"></div>
+                        </div>
+                        <div class="section__scill progress-block" >
+                            <div class="progress-block__label">SCSS</div>
+                            <div class="progress-block__val">50%</div>
+                            <div data-lg="scss" class="progress-block__progress-scale"></div>
+                        </div>
+                        <div class="section__scill progress-block" >
+                            <div class="progress-block__label">JavaScript</div>
+                            <div class="progress-block__val">75%</div>
+                            <div data-lg="js" class="progress-block__progress-scale"></div>
+                        </div>
+                        <div class="section__scill progress-block" >
+                            <div class="progress-block__label">Vue</div>
+                            <div class="progress-block__val">30%</div>
+                            <div data-lg="vue" class="progress-block__progress-scale"></div>
+                        </div>
+                    </div>
+                    <div class="my-scills__soft-scills">
+                        <div class="soft-skill my-skill__soft-skill">ответственный</div>
+                        <div class="soft-skill my-skill__soft-skill">коммуникабельный</div>
+                        <div class="soft-skill my-skill__soft-skill">готов учиться новому</div>
+                        <div class="soft-skill my-skill__soft-skill">умению работать в команде</div>
+                        <div class="soft-skill my-skill__soft-skill">креативен</div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="section my-experience">
+
             </section>
         </main>
         <footer></footer>
-
+    <script src="./src/blocks/error/errorMessag.js"></script>
+    <script src="./src/blocks/my-scills/my-scills.js"></script>
+    <script src="./src/blocks/my-bio/script_anim.js"></script>
+    <script src="./src/blocks/arrow-top/arrow-top.js"></script>
     <script src="./src/js/showBlockScroll.js"></script>
     <script src="./src/js/config_mobile_version.js"></script>
     <script src="./src/blocks/header/header.js"></script>
