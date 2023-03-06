@@ -5,6 +5,10 @@ let id = 0;
 let nameFile
 // console.log(form.name);
 
+document.body.onload = () => {
+    window.history.replaceState(null, null,'/registration');
+}
+
 form.sub.addEventListener('click', event =>{sendData(event)});
 form.avatarka.addEventListener('change', (event)=>{
     nameFile = inputFile(event,event.target.parentElement,nameFile);
