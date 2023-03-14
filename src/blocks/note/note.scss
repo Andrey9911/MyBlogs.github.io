@@ -1,11 +1,9 @@
 @import '../../scss/variable/variable.scss';
 .note{
-    background-color: var(--bgc-block);
-    box-shadow: 0 0 5px 1px #00000059;
+    @extend .box-block;
     border-left: 4px solid var(--color-green);
     max-width: 300px;
     padding: $padding-big - 30 $padding-big - 20;
-    box-sizing: border-box;
     border-radius: 5px;
     position: absolute;
 }

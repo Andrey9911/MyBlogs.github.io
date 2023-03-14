@@ -1,0 +1,71 @@
+.box-block, .contacts__content .contacts__icon, .contacts__content {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
+.contacts__content {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  padding: 50px 30%;
+  border-radius: 7px;
+  margin: 20px auto;
+}
+.contacts__content .contacts__icon {
+  background-color: var(--bgc-def);
+  color: #fff;
+  margin: 10px 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.contacts__content .contacts__icon:hover {
+  background-color: rgba(6, 25, 238, 0.3921568627);
+}
+.contacts__content .contacts__icon:hover[data-servis=telegram] {
+  color: #069dee;
+}
+.contacts__content .contacts__icon:hover[data-servis=mail] {
+  color: #0619ee;
+}
+.contacts__content .contacts__icon:hover[data-servis=mail] > svg > [class=path2] {
+  color: rgb(254, 222, 15);
+}
+.contacts__content .contacts__icon:hover[data-servis=phone] {
+  color: rgba(0, 0, 0, 0.5294117647);
+}
+
+.icon__message {
+  position: relative;
+  padding: 10px 10px;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.icon__message > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.hint {
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  opacity: 0;
+  transition: all ease-out 0.2s;
+  background-color: #444444;
+  border-radius: 7px;
+  color: #fff;
+  padding: 10px 5px;
+}
+.hint.hint_show {
+  opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .contacts__content {
+    display: block;
+    padding: 50px 30%;
+  }
+}/*# sourceMappingURL=contacts.css.map */

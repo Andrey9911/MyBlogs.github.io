@@ -1,4 +1,4 @@
-import { sendquery } from '../../js/db';
+// import sendquery  from '../../js/db.js';
 
 let form = document.querySelector('.registr>form');
 let id = 0;
@@ -106,14 +106,23 @@ function checkPassword(){
         }
     }
 }
-function validData(name,fname,nameFile,email,pass)
+ function validData(name,fname,nameFile,email,pass)
 {
     id++;
     let user = new User(id,name,fname,nameFile,pass,email);
         console.log(user.__proto__);
-        errMessage(document.body,'Вы зарегестрировались :)')
-        sendquery(`INSERT INTO users (id,name,fname,email,password,img,status) VALUES (NULL, ${user.name}, ${user.fname}, ${user.email}, ${user.password}, ${user.img}, 'user');`)
-        setTimeout(() => {location.href = './index.html'},1000)
+        new Promise(resolve => {
+            addNewUser(user)
+            resolve(user)
+        })
+        .then(rez => {
+            errMessage(document.body,'Вы зарегестрировались :)')
+        })
+        
+        
+        
+        // sendquery(`INSERT INTO users (id,name,fname,email,password,img,status) VALUES (NULL, ${user.name}, ${user.fname}, ${user.email}, ${user.password}, ${user.img}, 'user');`)
+        // setTimeout(() => {location.href = './index.html'},1000)
 
     
 }

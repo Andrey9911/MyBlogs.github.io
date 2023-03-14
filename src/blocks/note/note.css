@@ -1,10 +1,13 @@
-.note {
-  background-color: var(--bgc-block);
+.box-block, .note {
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
+.note {
   border-left: 4px solid var(--color-green);
   max-width: 300px;
   padding: 20px 30px;
-  box-sizing: border-box;
   border-radius: 5px;
   position: absolute;
 }

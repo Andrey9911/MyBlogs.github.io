@@ -14,14 +14,28 @@ document.addEventListener('scroll', e => {
     }
 
     document.querySelectorAll('.visiable').forEach((el,i,arr) => {
+        let navEl = document.querySelectorAll('li.nav__li>a');
         let topEl = el.getBoundingClientRect().top;
+        let idEl = el.id;
+        let href;
+        for(a of navEl){
+            href = a.href.match(/[^#]*$/)[0]
+            if((topEl) < e.target.scrollingElement.clientHeight - 250 && (topEl * 1 != (-topEl))){
+                if(idEl === href) {
+                    a.classList.add('a_current-Nav-Block')
+                }
+                else a.classList.remove('a_current-Nav-Block')
+            } 
+        }
+        
         if((topEl) < e.target.scrollingElement.clientHeight - 200)
         {
+
             if(el.classList.contains('my-scills'))
             {
                 for(i of el.getElementsByClassName('progress-block__progress-scale'))
                 {
-                    console.log(i.classList.add('show'));
+                    i.classList.add('show');
                     
                 }
             }

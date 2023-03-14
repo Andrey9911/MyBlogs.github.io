@@ -1,3 +1,9 @@
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .head {
   position: absolute;
   top: 0;
@@ -58,7 +64,10 @@
   text-decoration: none;
   color: var(--color-inside-dark-block);
 }
-.head .head-nav .head-nav-ul .nav__li::before {
+.head .head-nav .head-nav-ul .nav__li > a.a_current-Nav-Block {
+  color: var(--color-hover-text);
+}
+.head .head-nav .head-nav-ul .nav__li > a::before {
   content: "";
   position: absolute;
   display: block;
@@ -69,7 +78,7 @@
   opacity: 0;
   background-color: #ff0000;
 }
-.head .head-nav .head-nav-ul .nav__li:hover.nav__li::before {
+.head .head-nav .head-nav-ul .nav__li > a:hover::before {
   height: 100%;
   opacity: 0.5;
   transition: 0.3s ease all;

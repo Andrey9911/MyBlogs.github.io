@@ -1,0 +1,63 @@
+@import '../../scss/variable/variable.scss';
+
+
+.contacts__content{
+    @extend .box-block;
+    @include flex-content;
+    max-width: 80%;
+    padding: 50px 30%;
+    border-radius: 7px;
+    margin: 20px auto;
+
+    .contacts__icon{
+        @extend .box-block;
+        background-color: var(--bgc-def);
+        color: #fff;
+        margin: 10px 7px;
+        width: fit-content;
+
+        &:hover{
+            &[data-servis="telegram"]{color: #069dee;}
+            &[data-servis="mail"]{
+                color: #0619ee;
+
+                &>svg>[class="path2"]{color: rgb(254, 222, 15);}
+            }
+            &[data-servis="phone"]{color: #00000087;}
+            background-color: #0619ee64;
+        }
+    }
+}
+.icon__message{
+    position: relative;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: all ease .3s;
+    cursor: pointer;
+}
+.icon__message>svg{
+    width: 30px;
+    height: 30px;
+}
+.hint{
+    position: absolute;
+    top: -50px;
+    left: 0px;
+    opacity: 0;
+    transition: all ease-out .2s;
+    background-color: #444444;
+    border-radius: 7px;
+    color: #fff;
+    padding: 10px 5px;
+    
+
+    &.hint_show{opacity: 1;}
+}
+
+@media screen and (max-width: 500px)
+{
+    .contacts__content{
+        display: block;
+        padding: 50px 30%;
+    }
+}

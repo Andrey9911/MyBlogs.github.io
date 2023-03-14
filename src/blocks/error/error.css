@@ -1,3 +1,9 @@
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .input.inp_invalid {
   border: 1px solid var(--color-valid);
   animation: error 0.4s ease;

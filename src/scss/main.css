@@ -1,3 +1,9 @@
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .section {
   height: 100vh;
   padding: 20px 100px;
@@ -53,6 +59,12 @@
     font-size: 1.5em;
   }
 }
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .my-scills__content {
   padding: 30px 50px;
   display: flex;
@@ -196,6 +208,12 @@
     margin: 5px;
   }
 }
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .my-bio .my-bio__content {
   display: flex;
   align-items: center;
@@ -281,6 +299,12 @@
     background-color: var(--color-hover-text);
   }
 }
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .top-block {
   height: 100vh;
   background-color: var(--bgc-def);
@@ -344,6 +368,12 @@
     left: 25px;
   }
 }
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .input.inp_invalid {
   border: 1px solid var(--color-valid);
   animation: error 0.4s ease;
@@ -388,6 +418,12 @@
     font-weight: bold;
   }
 }
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .registr {
   box-sizing: border-box;
   margin: 0 auto;
@@ -477,13 +513,16 @@ ul .rules-pass-invalid::before {
     padding: 10px;
   }
 }
-.note {
-  background-color: var(--bgc-block);
+.box-block, .note {
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
+.note {
   border-left: 4px solid var(--color-green);
   max-width: 300px;
   padding: 20px 30px;
-  box-sizing: border-box;
   border-radius: 5px;
   position: absolute;
 }
@@ -545,6 +584,12 @@ ul .rules-pass-invalid::before {
     margin: 0 auto;
   }
 }
+.box-block {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
 .head {
   position: absolute;
   top: 0;
@@ -605,7 +650,10 @@ ul .rules-pass-invalid::before {
   text-decoration: none;
   color: var(--color-inside-dark-block);
 }
-.head .head-nav .head-nav-ul .nav__li::before {
+.head .head-nav .head-nav-ul .nav__li > a.a_current-Nav-Block {
+  color: var(--color-hover-text);
+}
+.head .head-nav .head-nav-ul .nav__li > a::before {
   content: "";
   position: absolute;
   display: block;
@@ -616,7 +664,7 @@ ul .rules-pass-invalid::before {
   opacity: 0;
   background-color: #ff0000;
 }
-.head .head-nav .head-nav-ul .nav__li:hover.nav__li::before {
+.head .head-nav .head-nav-ul .nav__li > a:hover::before {
   height: 100%;
   opacity: 0.5;
   transition: 0.3s ease all;
@@ -844,6 +892,77 @@ ul .rules-pass-invalid::before {
   transform: translateY(10px);
 }
 
+.box-block, .contacts__content .contacts__icon, .contacts__content {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3490196078);
+  background-color: var(--bgc-block);
+  box-sizing: border-box;
+}
+
+.contacts__content {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  padding: 50px 30%;
+  border-radius: 7px;
+  margin: 20px auto;
+}
+.contacts__content .contacts__icon {
+  background-color: var(--bgc-def);
+  color: #fff;
+  margin: 10px 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.contacts__content .contacts__icon:hover {
+  background-color: rgba(6, 25, 238, 0.3921568627);
+}
+.contacts__content .contacts__icon:hover[data-servis=telegram] {
+  color: #069dee;
+}
+.contacts__content .contacts__icon:hover[data-servis=mail] {
+  color: #0619ee;
+}
+.contacts__content .contacts__icon:hover[data-servis=mail] > svg > [class=path2] {
+  color: rgb(254, 222, 15);
+}
+.contacts__content .contacts__icon:hover[data-servis=phone] {
+  color: rgba(0, 0, 0, 0.5294117647);
+}
+
+.icon__message {
+  position: relative;
+  padding: 10px 10px;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.icon__message > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.hint {
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  opacity: 0;
+  transition: all ease-out 0.2s;
+  background-color: #444444;
+  border-radius: 7px;
+  color: #fff;
+  padding: 10px 5px;
+}
+.hint.hint_show {
+  opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .contacts__content {
+    display: block;
+    padding: 50px 30%;
+  }
+}
 @font-face {
   font-family: "btfont";
   src: url("../../node_modules/@uiw/bootstrap-icons/fonts/btfont.ttf");
